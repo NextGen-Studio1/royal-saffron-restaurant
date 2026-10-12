@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Meta Tags -->
+  <title>Royal Saffron — Imperial Flavors & Contemporary Indian Fine Dining</title>
+  <meta name="description" content="Experience royal Indian fine dining at Royal Saffron. Savor slow-cooked Awadhi Dum Biryanis, charcoal tandoor kebabs, 24-hour Dal Makhani, and regal saffron delicacies in an atmosphere of majestic opulence.">
+  <meta name="keywords" content="Indian restaurant, fine dining, Royal Saffron, Punjabi restaurant, Mughlai cuisine, North Indian food, Biryani, Tandoori, table reservation, luxury dining">
+  
+  <!-- Schema.org Restaurant Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Royal Saffron",
+    "image": "assets/images/hero-ambience.jpg",
+    "servesCuisine": "Indian, Mughlai, Awadhi, Fine Dining",
+    "priceRange": "₹₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot 42, Royal Crest Boulevard, Road No. 36, Jubilee Hills",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "postalCode": "500033",
+      "addressCountry": "IN"
+    },
+    "telephone": "+919876543210",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "2840"
+    }
+  }
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Ambient Noise Texture -->
+  <div class="noise-overlay"></div>
+
+  <!-- 1. TOP DEMO CONTROLS BAR (White-Label Persona Switcher for Clients) -->
+  <div class="demo-topbar" id="demo-topbar">
+    <div class="demo-topbar-info">
+      <span>🍽️ <strong>Client Demo Engine:</strong> 1 Master Design & Structure</span>
+      <span style="opacity: 0.5;">|</span>
+      <span>Select a pre-built cuisine persona or rebrand live:</span>
+    </div>
+    <div class="demo-presets-nav">
+      <button class="preset-btn active" data-preset="royal-saffron" id="preset-royal-saffron">
+        <span>🌟</span> Royal Saffron (Fine Dining)
+      </button>
+      <button class="preset-btn" data-preset="pind-punjab" id="preset-pind-punjab">
+        <span>🫓</span> Pind Punjab (Tandoor & Dhaba)
+      </button>
+      <button class="preset-btn" data-preset="dawat-e-mughal" id="preset-dawat-e-mughal">
+        <span>👑</span> Dawat-e-Mughal (Imperial Awadhi)
+      </button>
+      <button class="preset-btn" data-preset="urban-mirchi" id="preset-urban-mirchi">
+        <span>🌶️</span> Urban Mirchi (Modern Bistro)
+      </button>
+      <button class="btn-customizer-toggle" id="btn-open-customizer">
+        <span>🎨</span> Custom Rebrand
+      </button>
+      <a href="../index.html" class="btn-customizer-toggle" style="text-decoration: none; color: #d4af37; border-color: rgba(212, 175, 55, 0.4);">
+        <span>←</span> All Demos
+      </a>
+    </div>
+  </div>
+
+  <!-- 2. LUXURY HEADER & NAVIGATION BAR -->
+  <header class="site-header" id="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" id="brand-logo-link">
+        <div class="brand-logo-crest">⚜️</div>
+        <div class="brand-logo-text">
+          <span class="brand-name brand-name-text">Royal Saffron</span>
+          <span class="brand-tagline brand-tagline-text">Fine Dining & Mughlai</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#story" class="nav-link">Our Heritage</a></li>
+          <li><a href="#menu" class="nav-link">Digital Menu</a></li>
+          <li><a href="#reservations" class="nav-link">Reservations</a></li>
+          <li><a href="#gallery" class="nav-link">Ambience</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-cart-trigger" id="btn-cart-open" onclick="App.toggleCartDrawer(true)" aria-label="View Food Bag">
+          <span>🛍️</span>
+          <span class="cart-count-badge">0</span>
+        </button>
+        <a href="#reservations" class="btn btn-primary btn-sm" id="nav-book-btn">
+          <span>📅</span> Book Table
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 3. HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-media">
+        <img src="assets/images/hero-ambience.jpg" alt="Luxury Indian Fine Dining Ambience" class="hero-bg-img" id="hero-bg-img">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-status-pill">
+              <span class="status-dot"></span>
+              <span id="hero-status-text" style="font-size: 0.85rem; font-weight: 600; color: #FFF;">Open Now • Table Reservations Recommended</span>
+            </div>
+
+            <h1 class="hero-title" id="hero-title">
+              <span class="gold-text">Royal Saffron</span><br>
+              Imperial Flavors & Modern Indian Fine Dining
+            </h1>
+
+            <p class="hero-subheadline" id="hero-subheadline">
+              Where timeless Awadhi heritage meets contemporary culinary artistry in an ambiance of gold-dusted regal opulence.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#reservations" class="btn btn-primary btn-lg" id="hero-reserve-cta">
+                <span>👑</span> Reserve a Royal Table
+              </a>
+              <a href="#menu" class="btn btn-secondary btn-lg" id="hero-menu-cta">
+                <span>📜</span> Explore Menu
+              </a>
+              <a href="https://wa.me/919876543210" target="_blank" class="btn btn-whatsapp btn-lg whatsapp-direct-link" id="hero-whatsapp-cta">
+                <span>💬</span> WhatsApp Order
+              </a>
+            </div>
+
+            <div class="hero-trust-bar">
+              <div class="trust-item">
+                <span class="trust-number" id="hero-rating-num">4.9 ★</span>
+                <span class="trust-label" id="hero-reviews-count">2,840+ Verified Reviews</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-number">100%</span>
+                <span class="trust-label">Pure Desi Ghee & Fresh Spices</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-number">Award</span>
+                <span class="trust-label">Michelin Guide Recommended</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Showcase Card -->
+          <div class="hero-card-showcase">
+            <div class="hero-floating-card">
+              <div class="signature-dish-preview">
+                <div class="signature-dish-img-box">
+                  <img src="assets/images/dum-biryani.jpg" alt="Nawabi Saffron Dum Biryani" id="hero-feature-img">
+                  <span class="signature-badge-overlay" id="hero-badge-text">✨ Royal Indian Dining Experience</span>
+                </div>
+                <div class="signature-dish-details">
+                  <div class="signature-dish-meta">
+                    <h3 class="signature-dish-title">Nawabi Dum Biryani</h3>
+                    <span class="signature-dish-price">₹685</span>
+                  </div>
+                  <p class="signature-dish-desc">Slow-cooked 4-hour Awadhi dum pukht with aged basmati, Kashmiri saffron, and silver leaf vark.</p>
+                  <div style="display: flex; gap: 0.75rem; margin-top: 0.5rem;">
+                    <button class="btn btn-primary btn-sm" onclick="App.addToCart('dish-1')" style="flex: 1;">
+                      <span>+</span> Add to Bag
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="App.openDishModal('dish-1')">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. BRAND HIGHLIGHTS / PILLARS -->
+    <section class="section-wrapper" style="background: rgba(14, 14, 18, 0.6);">
+      <div class="container">
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon-box">🏺</div>
+            <h3>24-Hour Dum Pukht</h3>
+            <p>Ancient clay-sealed handis simmering over charcoal embers to gently trap every aromatic nuance and tenderness.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon-box">✨</div>
+            <h3>Organic Kashmiri Saffron</h3>
+            <p>Directly sourced Grade-A Pampore saffron threads, stone-ground whole spices, and pure churned Vedic cow ghee.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon-box">👨‍🍳</div>
+            <h3>Master Khansama Legacy</h3>
+            <p>Centuries-old family recipes preserved through generations of royal palace culinary masters and tandoor ustads.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon-box">👑</div>
+            <h3>Regal Hospitality</h3>
+            <p>Impeccable table service, private dining chambers, bespoke sommelier wine pairings, and memorable celebrations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. STORY, HERITAGE & MASTER CHEF -->
+    <section class="section-wrapper" id="story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-media">
+            <img src="assets/images/hero-ambience.jpg" alt="Restaurant Interior" class="story-main-img">
+            <div class="story-floating-badge">
+              <span class="badge-crest-icon">⚜️</span>
+              <div>
+                <div class="badge-text-title"><span class="brand-name-text">Royal Saffron</span> Legacy</div>
+                <div class="badge-text-sub">Preserving Imperial Recipes Since 2016</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-content">
+            <div class="section-tag">Our Culinary Heritage</div>
+            <h2 class="section-title">A Symphony of <span class="gold-text">Flavors & Royal Traditions</span></h2>
+            <p>
+              Born from a passion for India’s grand royal dastarkhwans, <span class="brand-name-text">Royal Saffron</span> pays homage to the legendary feast traditions of Awadhi Nawabs, Rajput Maharajas, and Mughal Emperors.
+            </p>
+            <p>
+              Our culinary philosophy centers on patience, uncompromised ingredient authenticity, and precision spice layering. We never use artificial essences or commercial short-cuts — each gravy is slow-braised to perfection.
+            </p>
+
+            <div class="story-quote-box" id="chef-quote">
+              “Every grain of saffron, every crackle of cumin in pure ghee, and every hour of dum cooking is a reverence to ancient royal kitchens.”
+            </div>
+
+            <div class="chef-signature-row">
+              <div>
+                <div class="chef-info-name" id="chef-name">Chef Ranveer Mehra</div>
+                <div class="chef-info-title" id="chef-title">Grand Master Chef & Culinary Historian</div>
+              </div>
+              <div class="chef-seal" id="chef-seal">Ranveer Mehra</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. INTERACTIVE DIGITAL MENU SECTION -->
+    <section class="section-wrapper" id="menu" style="background: rgba(10, 10, 14, 0.8);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Artisanal Dining Experience</div>
+          <h2 class="section-title">The <span class="gold-text">Imperial Menu</span></h2>
+          <p class="section-desc">Handcrafted delicacies prepared fresh upon your order using stone-ground spices and time-honored techniques.</p>
+          <div class="ornament-divider">✦ ❖ ✦</div>
+        </div>
+
+        <!-- Menu Controls: Search, Dietary Filters & Categories -->
+        <div class="menu-controls-wrapper">
+          <div class="menu-search-and-filters">
+            <div class="search-input-box">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="menu-search-input" placeholder="Search biryanis, kebabs, curries, desserts...">
+            </div>
+
+            <div class="dietary-filter-pills">
+              <button class="diet-toggle-btn active" data-diet="all">All Dishes</button>
+              <button class="diet-toggle-btn" data-diet="veg">
+                <span class="badge-diet veg"></span> Vegetarian
+              </button>
+              <button class="diet-toggle-btn" data-diet="non-veg">
+                <span class="badge-diet non-veg"></span> Non-Veg
+              </button>
+              <button class="diet-toggle-btn" data-diet="vegan">
+                🌱 Vegan
+              </button>
+            </div>
+          </div>
+
+          <!-- Category Tabs -->
+          <div class="category-tabs-scroll" id="category-tabs-container">
+            <!-- Dynamically injected category buttons -->
+          </div>
+        </div>
+
+        <!-- Menu Items Grid -->
+        <div class="menu-grid" id="menu-items-grid">
+          <!-- Dynamically populated from restaurant-config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. LUXURY TABLE RESERVATION SUITE -->
+    <section class="section-wrapper" id="reservations">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">VIP Dining & Tables</div>
+          <h2 class="section-title">Reserve Your <span class="gold-text">Royal Table</span></h2>
+          <p class="section-desc">Experience royal dining at its finest. Instant reservation confirmation with immediate WhatsApp coordination.</p>
+          <div class="ornament-divider">✦ ❖ ✦</div>
+        </div>
+
+        <div class="reservation-card">
+          <form id="table-reservation-form">
+            <div class="reservation-form-grid">
+              <div class="form-group">
+                <label class="form-label">👤 Full Name *</label>
+                <input type="text" name="res_name" class="form-input" placeholder="e.g. Vikramaditya Sharma" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">📞 Phone / WhatsApp *</label>
+                <input type="tel" name="res_phone" class="form-input" placeholder="e.g. +91 98765 43210" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">👥 Number of Guests *</label>
+                <select name="res_guests" class="form-select" required>
+                  <option value="2">2 Guests (Couple Dining)</option>
+                  <option value="4" selected>4 Guests (Family / Friends)</option>
+                  <option value="6">6 Guests (Celebration Table)</option>
+                  <option value="8">8 Guests (Royal Table)</option>
+                  <option value="12+">12+ Guests (Private Chamber Inquiry)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">📅 Preferred Date *</label>
+                <input type="date" name="res_date" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">⏰ Preferred Time Slot *</label>
+                <select name="res_time" class="form-select" required>
+                  <option value="12:30 PM (Lunch)">12:30 PM (Lunch Seating)</option>
+                  <option value="01:30 PM (Lunch)">01:30 PM (Lunch Seating)</option>
+                  <option value="02:30 PM (Lunch)">02:30 PM (Late Lunch)</option>
+                  <option value="07:30 PM (Dinner)" selected>07:30 PM (Prime Dinner)</option>
+                  <option value="08:30 PM (Dinner)">08:30 PM (Prime Dinner)</option>
+                  <option value="09:45 PM (Dinner)">09:45 PM (Late Evening)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">🏛️ Seating Atmosphere</label>
+                <select name="res_seating" class="form-select">
+                  <option value="Main Regal Chandelier Hall">Main Regal Chandelier Hall</option>
+                  <option value="Romantic Candlelight Corner">Romantic Candlelight Corner</option>
+                  <option value="Private Maharaja Dining Booth">Private Maharaja Dining Booth</option>
+                  <option value="Outdoor Courtyard / Terrace">Outdoor Courtyard / Terrace</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">🎉 Special Occasion</label>
+                <select name="res_occasion" class="form-select">
+                  <option value="Regular Fine Dining">Regular Fine Dining</option>
+                  <option value="Birthday Celebration">Birthday Celebration</option>
+                  <option value="Wedding Anniversary">Wedding Anniversary</option>
+                  <option value="Corporate / Business Dinner">Corporate / Business Dinner</option>
+                  <option value="Romantic Proposal">Romantic Proposal</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="grid-column: span 2;">
+                <label class="form-label">📝 Dietary Requirements / Special Requests</label>
+                <input type="text" name="res_notes" class="form-input" placeholder="e.g. Jain food options, High chair needed, Anniversary cake surprise...">
+              </div>
+            </div>
+
+            <div class="reservation-action-row">
+              <div class="reservation-note">
+                <span>🔒</span> Instant reservation dispatch directly to Restaurant Manager WhatsApp for guaranteed table hold.
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" id="btn-submit-booking">
+                <span>📅</span> Confirm Table Reservation via WhatsApp
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. AMBIENCE & CULINARY GALLERY -->
+    <section class="section-wrapper" id="gallery" style="background: rgba(12, 12, 16, 0.7);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Visual Opulence</div>
+          <h2 class="section-title">The <span class="gold-text">Royal Experience</span></h2>
+          <p class="section-desc">Glimpses into our magnificent interior arches, handcrafted brass handis, and memorable culinary moments.</p>
+          <div class="ornament-divider">✦ ❖ ✦</div>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Dynamically populated from restaurant-config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. REVIEWS & TESTIMONIALS -->
+    <section class="section-wrapper" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Guest Praise</div>
+          <h2 class="section-title">Words of <span class="gold-text">Patrons & Critics</span></h2>
+          <p class="section-desc">Over 2,800+ five-star reviews celebrating authentic flavors and unforgettable dining experiences.</p>
+          <div class="ornament-divider">✦ ❖ ✦</div>
+        </div>
+
+        <div class="reviews-grid" id="reviews-grid">
+          <!-- Dynamically populated from restaurant-config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. LOCATION, HOURS & CONTACT -->
+    <section class="section-wrapper" id="contact" style="background: rgba(10, 10, 14, 0.9);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Visit Us</div>
+          <h2 class="section-title">Find & <span class="gold-text">Connect With Us</span></h2>
+          <p class="section-desc">We look forward to welcoming you for an unforgettable imperial culinary journey.</p>
+          <div class="ornament-divider">✦ ❖ ✦</div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <div>
+              <h3 style="margin-bottom: 1.5rem; font-family: var(--font-heading); color: #FFF;">
+                <span class="brand-name-text">Royal Saffron</span> Flagship
+              </h3>
+
+              <div class="contact-detail-group">
+                <div class="contact-item">
+                  <div class="contact-icon-box">📍</div>
+                  <div class="contact-item-text">
+                    <h4>Address</h4>
+                    <p class="restaurant-address-text">Plot 42, Royal Crest Boulevard, Road No. 36, Jubilee Hills, Hyderabad</p>
+                    <a href="https://maps.google.com" target="_blank" id="maps-direct-link" style="color: var(--primary-gold); font-size: 0.85rem; font-weight: 600; display: inline-block; margin-top: 4px;">
+                      Open in Google Maps ↗
+                    </a>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon-box">📞</div>
+                  <div class="contact-item-text">
+                    <h4>Phone & Direct Inquiries</h4>
+                    <p><a href="tel:+919876543210" class="restaurant-phone-link">+91 98765 43210</a></p>
+                    <p><a href="mailto:concierge@royalsaffron.com" class="restaurant-email-link">concierge@royalsaffron.com</a></p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon-box">⏰</div>
+                  <div class="contact-item-text">
+                    <h4>Service Timings</h4>
+                    <p><strong>Lunch:</strong> <span class="restaurant-timing-lunch">12:00 PM – 03:30 PM</span></p>
+                    <p><strong>Dinner:</strong> <span class="restaurant-timing-dinner">07:00 PM – 11:30 PM</span></p>
+                    <p style="font-size: 0.8rem; color: #10B981; margin-top: 4px;">Open 7 Days a Week • Valet Parking Available</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="#reservations" class="btn btn-primary btn-sm" style="flex: 1;">
+                <span>📅</span> Book Table
+              </a>
+              <a href="https://wa.me/919876543210" target="_blank" class="btn btn-whatsapp btn-sm whatsapp-direct-link" style="flex: 1;">
+                <span>💬</span> WhatsApp Us
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Google Maps Embed -->
+          <div class="contact-map-box">
+            <iframe id="contact-maps-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.663183573295!2d78.39958747493566!3d17.42798838346614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb96cd48c08467%3A0xc328a9b71eef6c82!2sJubilee%20Hills%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11. FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-logo-crest">⚜️</div>
+            <div class="brand-logo-text">
+              <span class="brand-name brand-name-text">Royal Saffron</span>
+              <span class="brand-tagline brand-tagline-text">Fine Dining & Mughlai</span>
+            </div>
+          </div>
+          <p>Celebrating the rich heritage of Indian royal gastronomy through authentic dum cooking, charcoal tandoor roasts, and uncompromised luxury hospitality.</p>
+          <div class="social-links-row">
+            <a href="https://instagram.com" target="_blank" class="social-icon-link" aria-label="Instagram">📸</a>
+            <a href="https://facebook.com" target="_blank" class="social-icon-link" aria-label="Facebook">📘</a>
+            <a href="https://tripadvisor.com" target="_blank" class="social-icon-link" aria-label="TripAdvisor">🦉</a>
+            <a href="https://wa.me/919876543210" target="_blank" class="social-icon-link whatsapp-direct-link" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Culinary Menu</h4>
+          <ul class="footer-links-list">
+            <li><a href="#menu">Chef's Signatures</a></li>
+            <li><a href="#menu">Charcoal Tandoor Kebabs</a></li>
+            <li><a href="#menu">Royal Curries & Gravies</a></li>
+            <li><a href="#menu">Awadhi Dum Biryanis</a></li>
+            <li><a href="#menu">Artisanal Saffron Desserts</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Guest Concierge</h4>
+          <ul class="footer-links-list">
+            <li><a href="#reservations">Table Reservations</a></li>
+            <li><a href="#story">Our Culinary Heritage</a></li>
+            <li><a href="#gallery">Ambience Gallery</a></li>
+            <li><a href="#contact">Private Dining Chambers</a></li>
+            <li><a href="#contact">Royal Event Catering</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Operating Hours</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Lunch:</strong> <span class="restaurant-timing-lunch">12:00 PM – 03:30 PM</span></p>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;"><strong>Dinner:</strong> <span class="restaurant-timing-dinner">07:00 PM – 11:30 PM</span></p>
+          <a href="#reservations" class="btn btn-secondary btn-sm" style="width: 100%;">Reserve Online</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 <span class="brand-name-text">Royal Saffron</span>. All Rights Reserved. Master Demo Template.</div>
+        <div>Designed for High-Converting Indian Restaurant Websites & Brand White-Labeling.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 12. CART / WHATSAPP ORDER DRAWER -->
+  <div class="cart-drawer-backdrop" id="cart-drawer-backdrop" onclick="App.toggleCartDrawer(false)"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Your Royal Bag (<span class="cart-count-badge" style="position: static; display: inline-flex;">0</span>)</h3>
+      <button class="btn-close-drawer" onclick="App.toggleCartDrawer(false)" aria-label="Close Bag">✕</button>
+    </div>
+
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Dynamically populated -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span>Order Subtotal:</span>
+        <span class="cart-summary-total" id="cart-subtotal-val">₹0</span>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">Taxes & packaging calculated upon WhatsApp confirmation.</p>
+      
+      <button class="btn btn-whatsapp" style="width: 100%; font-size: 1.05rem;" onclick="App.checkoutViaWhatsApp()">
+        <span>💬</span> Send Order via WhatsApp
+      </button>
+      <button class="btn btn-secondary btn-sm" onclick="App.toggleCartDrawer(false)">
+        Continue Adding Dishes
+      </button>
+    </div>
+  </aside>
+
+  <!-- 13. DISH DETAIL & LIGHTBOX MODAL -->
+  <div class="modal-backdrop" id="dish-detail-modal" onclick="if(event.target === this) App.closeModals()">
+    <div class="modal-box">
+      <button class="btn-modal-close" onclick="App.closeModals()">✕</button>
+      <div id="dish-modal-content">
+        <!-- Dynamically injected -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 14. LIVE REBRAND CUSTOMIZER MODAL -->
+  <div class="modal-backdrop" id="rebrand-modal" onclick="if(event.target === this) App.closeModals()">
+    <div class="modal-box" style="max-width: 600px; padding: 2rem;">
+      <button class="btn-modal-close" onclick="App.closeModals()">✕</button>
+      
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+        <span style="font-size: 1.8rem;">🎨</span>
+        <h2 style="font-size: 1.45rem; font-family: var(--font-heading); color: #FFF;">Live Rebrand Customizer</h2>
+      </div>
+      <p style="font-size: 0.9rem;">Type your client's restaurant details below to test how the entire website instantly adapts live:</p>
+
+      <form id="rebrand-customizer-form" style="margin-top: 1.5rem;">
+        <div class="rebrand-form-grid">
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label class="form-label">Restaurant Name</label>
+            <input type="text" name="custom_name" id="custom-brand-name" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="text" name="custom_phone" id="custom-phone" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">WhatsApp Number (e.g. 919876543210)</label>
+            <input type="text" name="custom_whatsapp" id="custom-whatsapp" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Primary Gold/Brand Color</label>
+            <input type="color" name="custom_color" id="custom-primary-color" class="form-input" style="height: 44px; padding: 4px; cursor: pointer;">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Accent Spice Color</label>
+            <input type="color" name="custom_accent" id="custom-accent-color" class="form-input" style="height: 44px; padding: 4px; cursor: pointer;">
+          </div>
+
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label class="form-label">Address / Location</label>
+            <input type="text" name="custom_address" id="custom-address" class="form-input">
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; justify-content: flex-end; margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="App.closeModals()">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-sm">
+            <span>✨</span> Apply Rebrand Instantly
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 15. FLOATING WHATSAPP CONCIERGE WIDGET -->
+  <div class="floating-whatsapp-widget" id="floating-whatsapp-widget">
+    <div class="whatsapp-popup-card" id="whatsapp-popup-card">
+      <div class="whatsapp-popup-header">
+        <div class="whatsapp-popup-avatar">💬</div>
+        <div>
+          <strong style="color: #FFF; font-size: 0.95rem; display: block;" class="brand-name-text">Royal Saffron</strong>
+          <span style="font-size: 0.75rem; color: #10B981;">● Online • Instant Concierge</span>
+        </div>
+      </div>
+      <p style="font-size: 0.825rem; color: #D1D5DB; margin-bottom: 0.85rem;">
+        Namaste! How may we assist your dining experience today?
+      </p>
+      <div class="whatsapp-quick-actions">
+        <a href="#reservations" class="whatsapp-quick-btn" onclick="document.getElementById('whatsapp-popup-card').classList.remove('show');">
+          📅 Book a Table Reservation
+        </a>
+        <button class="whatsapp-quick-btn" onclick="App.toggleCartDrawer(true); document.getElementById('whatsapp-popup-card').classList.remove('show');">
+          🛍️ Order Delicacies for Home
+        </button>
+        <a href="https://maps.google.com" target="_blank" id="wa-popup-maps-link" class="whatsapp-quick-btn">
+          📍 Get Driving Directions
+        </a>
+        <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-quick-btn whatsapp-direct-link" style="color: #25D366; font-weight: 700;">
+          💬 Chat with Restaurant Manager ↗
+        </a>
+      </div>
+    </div>
+
+    <button class="floating-whatsapp-btn" id="floating-whatsapp-btn" aria-label="Open WhatsApp Concierge">
+      <div class="whatsapp-pulse-ring"></div>
+      <span>💬</span>
+    </button>
+  </div>
+
+  <!-- 16. TOAST NOTIFICATIONS CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/restaurant-config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/customizer.js"></script>
+</body>
+</html>
